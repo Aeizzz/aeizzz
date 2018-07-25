@@ -2,7 +2,7 @@
 #先提交自己
 git add .
 git commit -am "auto publish"
-git push origin master
+git push --force --quiet https://github.com/Aeizzz/aeizzz.git master
 #然后编辑发布线上版本
 cross-env NODE_ENV=production webpack --progress --hide-modules
 mkdir publish
