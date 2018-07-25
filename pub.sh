@@ -21,7 +21,7 @@ echo "" > .gitignore
 git init
 git add .
 git commit -am "publish"
-git push --force --quiet https://github.com/Rozbo/blog.git master:gh-pages
+git push --force --quiet https://github.com/Aeizzz/aei-blog.git master:gh-pages
 cd ../
 # 清理资源
 rm -rf ./publish
