@@ -1,5 +1,6 @@
 #!/bin/sh
 #先提交自己
+yarn build
 git add .
 git commit -am "auto publish"
 git push --force --quiet https://github.com/Aeizzz/aeizzz.git master
