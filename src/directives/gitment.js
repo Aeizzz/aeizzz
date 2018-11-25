@@ -199,7 +199,6 @@ class Gitment {
 
     loadUserInfo() {
         if (!this.accessToken) {
-            this.logout()
             return Promise.resolve({})
         }
 
