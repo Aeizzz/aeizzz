@@ -99,9 +99,8 @@ class Gitment {
                 id: replacedUrl,
                 link: replacedUrl,
             }, options)
-            console.log(code,'code')
             this.state.user.isLoggingIn = true
-            http.post('https://github.com/login/oauth/access_token', {
+            http.post('https://auth.baixiaotu.cc', {
                 code,
                 client_id,
                 client_secret,
