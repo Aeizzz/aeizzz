@@ -105,6 +105,7 @@ class Gitment {
                 client_id,
                 client_secret,
             }, '').then(data => {
+                console.log(data)
                     this.accessToken = data.access_token
                     this.update()
                 }).catch(e => {

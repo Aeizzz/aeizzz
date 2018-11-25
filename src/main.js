@@ -44,6 +44,7 @@ const routes = [
 var router = new Router({
     base: __dirname,
     routes: routes,
+    mode: 'history'
 })
 router.beforeEach((to, form, next) => {
     Render.loading_end();
