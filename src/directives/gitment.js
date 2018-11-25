@@ -88,11 +88,9 @@ class Gitment {
         })
 
         const query = Query.parse()
-        console.log(query,'query')
         if (query.code) {
             const { client_id, client_secret } = this.oauth
             const code = query.code
-            delete query.code
             const search = Query.stringify(query)
             const replacedUrl = `${window.location.origin}${window.location.pathname}${search}${window.location.hash}`
             history.replaceState({}, '', replacedUrl)
@@ -101,7 +99,7 @@ class Gitment {
                 id: replacedUrl,
                 link: replacedUrl,
             }, options)
-
+            console.log(code,'code')
             this.state.user.isLoggingIn = true
             http.post('https://github.com/login/oauth/access_token', {
                 code,
