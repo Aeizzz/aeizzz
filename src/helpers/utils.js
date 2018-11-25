@@ -18,6 +18,7 @@ export function getTargetContainer(container) {
 
 export const Query = {
     parse(search = window.location.search) {
+        console.log(window.location.search,'window.location.search')
         if (!search) return {}
         const queryString = search[0] === '?' ? search.substring(1) : search
         const query = {}

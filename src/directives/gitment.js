@@ -88,6 +88,7 @@ class Gitment {
         })
 
         const query = Query.parse()
+        console.log(query,'query')
         if (query.code) {
             const { client_id, client_secret } = this.oauth
             const code = query.code
@@ -106,12 +107,10 @@ class Gitment {
                 code,
                 client_id,
                 client_secret,
-            }, '')
-                .then(data => {
+            }, '').then(data => {
                     this.accessToken = data.access_token
                     this.update()
-                })
-                .catch(e => {
+                }).catch(e => {
                     this.state.user.isLoggingIn = false
                     alert(e)
                 })
